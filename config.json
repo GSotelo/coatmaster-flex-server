@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "coatmaster-flex-server",
+      "script": "app.js",
+      "instances": "max",
+      "watch": true,
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "10000"
+      }
+    }
+  ]
+}

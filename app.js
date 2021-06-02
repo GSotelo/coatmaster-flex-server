@@ -17,7 +17,7 @@ const app = express();
 app.use(compression());
 
 // Serve static files
-//app.use(express.static(path.join(__dirname, "public", "build")));
+app.use(express.static(path.join(__dirname, "public", "build")));
 
 // Configuration
 const port = process.env.PORT || 5000;
@@ -26,7 +26,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/local-server", expressRouter);
-//app.use(reactRouter);
+app.use(reactRouter);
 
 // Error handler
 app.use(errorCtrl);
