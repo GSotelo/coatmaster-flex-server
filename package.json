@@ -1,0 +1,22 @@
+{
+  "name": "coatmaster-flex",
+  "version": "1.0.0",
+  "description": "Coatmaster flex",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "production": "nodemon -r dotenv/config app.js"
+  },
+  "author": "Giancarlo Sotelo",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^7.1.1",
+    "axios": "^0.21.1",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "require-main-filename": "^2.0.0"
+  }
+}
