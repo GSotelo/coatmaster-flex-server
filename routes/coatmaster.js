@@ -8,7 +8,8 @@ const {
   getApplications,
   getMeasurements,
   getSamples,
-  getServerStatus
+  getServerStatus,
+  getThreshold
 } = require("../controllers/coatmaster/coatmaster");
 
 // Routes
@@ -17,6 +18,7 @@ router.get("/configurations", getApplications);
 // Provides specific information about the application. No measurement information is given.
 router.get("/configurations/:id", getApplication);
 router.get("/samples?:id", getSamples);
+router.get("/pphd_configuration/threshold", getThreshold);
 
 router.post("/measurement/report", getMeasurements);
 

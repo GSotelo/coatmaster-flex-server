@@ -1,5 +1,9 @@
 // Native modules
+const path = require("path");
 
+// Custom modules
+const rootPath = require("../../util/root/root");
+const readFile = require("../../util/json/read");
 
 // Own modules
 const connectLocalServer = require("../../util/axios/axios");
@@ -54,5 +58,14 @@ exports.getMeasurements = wrap(
 
     const response = await connectLocalServer.post(url, body);
     res.send(response.data);
+  }
+)
+
+exports.getThreshold = wrap(
+  async (req, res, next) => {
+    // Read JSON data
+    const filepath = path.join(rootPath, "configuration", "threshold.json");
+    const dataJSON = await readFile(filepath);
+    res.send(dataJSON);
   }
 )
